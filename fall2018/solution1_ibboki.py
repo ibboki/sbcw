@@ -59,15 +59,16 @@ def union(xs, ys):
     xs.extend(ys)
     rstExtend = xs
     rstExtend.sort()
-
     j = 0
     for i in rstExtend:
         if i == j:
-            rstExtend.remove(i)
-            i += 1
+            if i != 0:
+                rstExtend.remove(i)
+                i += 1
         j = i
     result = rstExtend
     return result
+    
 #[1, 2, 3, 4, 5, 6]
 print(union(xs, ys))
 
