@@ -96,3 +96,25 @@ def net_asset_value(inventory, prices):
     return result
 
 print(net_asset_value(inventory, prices))
+
+## Problem 5
+index = {
+    'transparency': 37,
+    'composibility': 5,
+    'immutability': 40,
+    'idempotency': 14
+}
+def invert(index):
+    return {i:j for j,i in index.items()}
+
+print(invert(index))
+
+## Homework 6.1 (Bonus)
+def zip(*args):
+    list(zip([1, 2, 3], 'abc'))
+
+print(list(zip([1, 2, 3], 'abc')))
+
+
+
+
