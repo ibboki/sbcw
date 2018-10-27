@@ -1,6 +1,4 @@
-## Problem 1
-
-이 문제는 여러개의 하위 문제로 구성된 문제입니다. 코드를 길게 작성해서 풀어도 상관 없지만, 파이썬의 [list comprehension](https://www.programiz.com/python-programming/list-comprehension)을 이용하면 단 한줄로 해결할 수 있는 문제들입니다.
+코드를 길게 작성해서 풀어도 상관 없지만, 파이썬의 [list comprehension](https://www.programiz.com/python-programming/list-comprehension)을 이용하면 단 한줄로 해결할 수 있는 문제들입니다.
 
 ## Problem 1.1
 
@@ -114,10 +112,67 @@ prices = {
 
 위와 같은 경우 총 재고 가치는 `581.12` 입니다. 코드를 너무 복잡하게 만드는 것을 방지하기 위해서 `prices`는 항상 `inventory`에 있는 모든 아이템에 대한 가격 정보를 담고 있다고 가정해도 좋습니다.
 
+## Problem 5
+
+```python
+def invert(index):
+    # 여기에 여러분의 코드를 작성하세요
+    pass
+```
+
+딕셔너리의 키와 값을 바꾸는 코드를 작성하십시오.
+
+```python
+index = {
+    'transparency': 37,
+    'composibility': 5,
+    'immutability': 40,
+    'idempotency': 14
+}
+```
+
+기대되는 `invert()` 함수의 출력값은 다음과 같습니다.
+
+```python
+{37: 'transparency', 5: 'composibility', 40: 'immutability', 14: 'idempotency'}
+```
+
+코드를 복잡하게 만드는 것을 방지하기 위해 원본 딕셔너리의 키-값은 1:1 관계라고 가정합니다. (i.e., 같은 값을 가지는 중복되는 키가 없습니다.)
+
+## Homework 6.1 (Bonus)
+
+```python
+def zip(*args):
+    # 여기에 여러분의 코드를 작성하세요
+    pass
+```
+
+파이썬에서 제공하는 `zip()` 함수를 구현하십시오.
+
+    >>> list(zip([1, 2, 3], 'abc'))
+    [(1, 'a'), (2, 'b'), (3, 'c')]
+
+전달되는 리스트의 길이는 동일하지 않을 수도 있으며, 그런 경우 가장 짧은 리스트를 기준으로 결과를 반환합니다.
+
+    >>> list(zip([1, 2, 3, 4], 'abc', [9.0, 8.0]))
+    [(1, 'a', 9.0), (2, 'b', 8.0)]
+
+## Homework 6.2 (Bonus)
+
+```python
+def unzip(iterables):
+    # 여기에 여러분의 코드를 작성하세요
+    pass
+```
+
+6.1에서 구현한 `zip()`의 결과를 다시 원래대로 되돌려놓는 함수를 작성하십시오.
+
+    >>> list(unzip([(1, 'a'), (2, 'b'), (3, 'c')]))
+    [(1, 2, 3), ('a', 'b', 'c')]
 
 ## 제출
 
-답안은 `solution1_(GitHub 아이디).py` 파일로 제출해주십시오. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `solution1_suminb.py`가 되어야 합니다.
+답안은 `solutions/homework1_(GitHub 아이디).py` 파일로 제출해주십시오. 예를 들어서, GitHub 사용자 이름이 `suminb`라고 가정한다면 파일 이름은 `homework1_suminb.py`가 되어야 하고, `solutions` 디렉토리 안에 위치시키면 됩니다.
 
 ## 자동 채점
 
@@ -127,8 +182,9 @@ prices = {
 
 패키지가 설치되면 다음과 같이 테스트 파일을 실행해서 여러분이 작성한 코드가 제대로 작동되는지 검증하도록 합니다.
 
-    pytest -v test_homework1.py
+    pytest -v test_homework1.py --username (GitHub 아이디)
 
 ## 참고할만한 자료
 
 - https://www.datacamp.com/community/tutorials/data-structures-python
+- https://docs.python-guide.org/

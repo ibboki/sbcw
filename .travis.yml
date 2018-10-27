@@ -1,0 +1,12 @@
+language: python
+sudo: false
+
+python:
+  - "3.7-dev"
+
+install:
+  - pip install -r fall2018/requirements.txt
+
+script:
+  - export PYTHONPATH=$PYTHONPATH:.
+  - ls fall2018/solutions/homework*.py | awk -F'[_.]' '{print "pytest -v fall2018/test_" substr($1, 20) ".py --username=" $2}' | bash
